@@ -13,9 +13,10 @@ public class PslProgramingChallenge2 {
    */
   public static double calculateProfitability(double[] prices) {
     double profitability = 0;
+    double actualProf = 0;
     for (int i = 0; i < prices.length; i++) {
       for (int j = i + 1; j < prices.length; j++) {
-        double actualProf = prices[j] - prices[i];
+        actualProf = prices[j] - prices[i];
         if (actualProf > profitability) {
           profitability += actualProf;
         }
